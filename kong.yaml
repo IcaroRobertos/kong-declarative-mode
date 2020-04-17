@@ -1,0 +1,20 @@
+_format_version: "1.1"
+
+services:
+  - name: service1
+    host: $IP
+    port: 8080
+    routes:
+      - name: service1-web
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+        paths:
+          - /service1
+
+  - name: service2
+    host: $IP
+    port: 8081
+    routes:
+      - name: service2-web
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+        paths:
+          - /service2
