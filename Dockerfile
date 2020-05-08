@@ -9,8 +9,6 @@ WORKDIR /api
 
 COPY . .
 
-RUN sed -ie 's/$IP/'"192.168.25.5"'/g' kong.yaml
-
 RUN kong start -c kong.conf
 
 USER kong
