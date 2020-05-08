@@ -9,8 +9,8 @@ WORKDIR /api
 
 COPY . .
 
-RUN kong start -c kong.conf
-
 USER kong
+
+RUN kong start -c kong.conf
 
 EXPOSE 8000 8001
